@@ -8,22 +8,28 @@ class Inscription extends StatefulWidget {
 }
 
 class _InscriptionState extends State<Inscription> {
-  String email = 'yasminebenhamadi05@gmail.com';
-  String password = '123';
+  String nom = 'Benhamadi' ;
+  String prenom = 'Yasmine';
+  String email = 'iy_benhamadi@gmail.com';
+
+  String password = 'HeLlO123';
   final ServicesAuth _authService = ServicesAuth();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold (
       appBar: AppBar (
-        title: Text('sign in with email and password'),
+        title: Text('sign up with email and password'),
       ),
       body: Container(
         child : RaisedButton(
-            child: Text('Sign in'),
+            child: Text('Sign up'),
             onPressed: () async {
-              dynamic result = await _authService.registerEmail(email, password);
+              dynamic result = await _authService.registerEmail(email, password,nom,prenom);
               if (result == null)
                 print('Registration failed');
+              else
+                print('Signned up');
             }
         ),
       ),

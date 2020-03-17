@@ -1,7 +1,7 @@
 import 'package:location/location.dart';
 class Utilisateur {
-  String _id;
-  String _username;
+  String _id ;
+  //String _username;
   String _password;
   String _nom;
   String _prenom;
@@ -16,7 +16,15 @@ class Utilisateur {
   var _historique = new Map();
   bool _active;
   double _vitesse ;
-  int _code_confirmation = 0;
+  int _codeConfirmation = 0;
+  Utilisateur (String id ,String email, String password , String nom , String prenom)
+  {
+    this._id = id;
+    this._email = email;
+    this._password = password;
+    this._nom = nom;
+    this._prenom = prenom ;
+  }
   void setPassword (String newPassword,String oldPassword)
   {
      if(this._password.compareTo(oldPassword)==0)
@@ -28,9 +36,9 @@ class Utilisateur {
           print("Wrong password");
        }
   }
-  void recuperer_mot_passe(int code,String newPassword)
+  void recupererMotPasse(int code,String newPassword)
   {
-    if(code==_code_confirmation) {
+    if(code==_codeConfirmation) {
       this._password = newPassword;
     }
     else
@@ -44,13 +52,13 @@ class Utilisateur {
   }
   void quitterGroupe (Groupe g)
   {
-    var remove = _list_groupes.remove(g);
+    _list_groupes.remove(g);
   }
   void supprimerHistorique()
   {
     _historique.clear();
   }
-  void supprimerHistorique_Groupe(Groupe g)
+  void supprimerHistoriqueGroupe(Groupe g)
   {
     _historique.remove(g);
   }
@@ -75,6 +83,6 @@ class Groupe
 }
 
 class Historique {
-  Location location;
+  //Location location;
   //Date date;
 }

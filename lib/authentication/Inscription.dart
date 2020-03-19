@@ -11,7 +11,6 @@ class _InscriptionState extends State<Inscription> {
   String nom = 'Benhamadi' ;
   String prenom = 'Yasmine';
   String email = 'iy_benhamadi@gmail.com';
-
   String password = 'HeLlO123';
   final ServicesAuth _authService = ServicesAuth();
 
@@ -25,7 +24,7 @@ class _InscriptionState extends State<Inscription> {
         child : RaisedButton(
             child: Text('Sign up'),
             onPressed: () async {
-              dynamic result = await _authService.registerEmail(email, password,nom,prenom);
+              dynamic result = await _authService.registerEmail(email,password,nom,prenom);
               if (result == null)
                 print('Registration failed');
               else

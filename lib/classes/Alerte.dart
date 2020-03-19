@@ -7,6 +7,3 @@ class Alerte extends Message {
    }*/
 
 }
-class Groupe {
-
-}

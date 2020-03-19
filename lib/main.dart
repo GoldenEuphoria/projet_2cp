@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:projet_2cp/authentication/Authentication.dart';
-import 'package:provider/provider.dart';
+//import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
 

@@ -5,26 +5,20 @@ class Message {
   String text;
   Type type;
   Utilisateur expediteur;
+/*Date date;*/
 
-  void setMessage(String text)
-  {
-    this.text = text;
-  }
-
-  void afficher(){
+/*void afficher(){
 
     print(text);
-    //print(new DateFormat.yMMMd().format(new DateTime.now()));
-    print(expediteur.nom);
-    print(expediteur.prenom);
 
+  }*/
 
-
-  }
-
-
+//void envoyer(Groupe g){
 
 }
-class Groupe {
 
-}
+
+
+//class Groupe {
+
+

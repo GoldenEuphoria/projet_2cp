@@ -8,7 +8,7 @@ class Request {
   bool acceptee;
   bool refusee;
   String text;
-  Groupe groupe;
+  //Groupe groupe;
 
   void accepter() {
 

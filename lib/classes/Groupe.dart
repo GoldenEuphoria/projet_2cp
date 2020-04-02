@@ -1,7 +1,10 @@
 import 'package:location/location.dart';
+
 import 'package:projet_2cp/classes/Utilisateur.dart';
-import 'Discussion.dart';
+
 import 'TypeGroupe.dart';
+
+
 
 abstract class Groupe{
 
@@ -26,4 +29,7 @@ abstract class Groupe{
    void afficher(); //UNE METHODE ABSTRAITE
 
   }
+
+class Discussion {
+}
 
